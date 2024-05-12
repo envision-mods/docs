@@ -1,3 +1,5 @@
+***
+
 # Page
 
 
@@ -312,7 +314,7 @@ public getId(): int
 
 ### offsetExists
 
-Whether the given offset exists.
+Check whether the given offset exists.
 
 ```php
 public offsetExists(mixed $offset): bool
@@ -329,8 +331,12 @@ public offsetExists(mixed $offset): bool
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$offset` | **mixed** |  |
+| `$offset` | **mixed** | The offset to check. |
 
+
+**Return Value:**
+
+True if the offset exists, false otherwise.
 
 
 
@@ -339,10 +345,10 @@ public offsetExists(mixed $offset): bool
 
 ### offsetGet
 
-Fetch the offset if it exists othwerwise return NULL.
+Retrieve the value of the given offset.
 
 ```php
-public offsetGet(mixed $offset): mixed
+public offsetGet(mixed $offset): mixed|null
 ```
 
 
@@ -356,8 +362,12 @@ public offsetGet(mixed $offset): mixed
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$offset` | **mixed** |  |
+| `$offset` | **mixed** | The offset to retrieve. |
 
+
+**Return Value:**
+
+The value of the offset, or null if it does not exist.
 
 
 
@@ -366,7 +376,7 @@ public offsetGet(mixed $offset): mixed
 
 ### offsetSet
 
-Assign the offset.
+Set the value of the given offset.
 
 ```php
 public offsetSet(mixed $offset, mixed $value): void
@@ -383,8 +393,8 @@ public offsetSet(mixed $offset, mixed $value): void
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$offset` | **mixed** |  |
-| `$value` | **mixed** |  |
+| `$offset` | **mixed** | The offset to set. |
+| `$value` | **mixed** | The value to assign to the offset. |
 
 
 
@@ -394,7 +404,7 @@ public offsetSet(mixed $offset, mixed $value): void
 
 ### offsetUnset
 
-Unset the offset.
+Unset the given offset.
 
 ```php
 public offsetUnset(mixed $offset): void
@@ -421,4 +431,4 @@ public offsetUnset(mixed $offset): void
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

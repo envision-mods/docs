@@ -94,7 +94,7 @@ public __construct(array $field, string $key, string $type): mixed
 
 ### beforeSave
 
-Transform data right before it is saved.
+Transform data before it is saved.
 
 ```php
 public beforeSave(mixed $val): string
@@ -111,12 +111,12 @@ public beforeSave(mixed $val): string
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$val` | **mixed** | ?string Value from POST. |
+| `$val` | **mixed** | The value from POST. |
 
 
 **Return Value:**
 
-Value to save to the database.
+The value to save to the database.
 
 
 
@@ -146,4 +146,4 @@ public __toString(): string
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

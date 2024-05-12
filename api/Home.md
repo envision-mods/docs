@@ -21,21 +21,21 @@ This is an automatically generated documentation for **Envision Portal documenta
 | Class | Description |
 |-------|-------------|
 | [`DataMapper`](./classes/EnvisionPortal/DataMapper.md) | |
-| [`DatabaseHelper`](./classes/EnvisionPortal/DatabaseHelper.md) | |
+| [`DatabaseHelper`](./classes/EnvisionPortal/DatabaseHelper.md) | Provides a set of utility methods for working with the database.|
 | [`Menu`](./classes/EnvisionPortal/Menu.md) | |
 | [`Page`](./classes/EnvisionPortal/Page.md) | |
 | [`Pages`](./classes/EnvisionPortal/Pages.md) | |
 | [`Portal`](./classes/EnvisionPortal/Portal.md) | |
-| [`Util`](./classes/EnvisionPortal/Util.md) | |
+| [`Util`](./classes/EnvisionPortal/Util.md) | Utility class providing various helper functions.|
 
 
 #### Traits
 
 | Trait | Description |
 |-------|-------------|
-| [`ArrayAccessTrait`](./classes/EnvisionPortal/ArrayAccessTrait.md) | |
+| [`ArrayAccessTrait`](./classes/EnvisionPortal/ArrayAccessTrait.md) | Provides a uniform interface for accessing and modifying the properties<br />of an object as if it were an array.|
 | [`FieldTrait`](./classes/EnvisionPortal/FieldTrait.md) | |
-| [`ModuleTrait`](./classes/EnvisionPortal/ModuleTrait.md) | |
+| [`ModuleTrait`](./classes/EnvisionPortal/ModuleTrait.md) | Trait providing common functionality for modules in Envision Portal.|
 
 
 
@@ -43,14 +43,14 @@ This is an automatically generated documentation for **Envision Portal documenta
 
 | Interface | Description |
 |-----------|-------------|
-| [`CacheableFieldInterface`](./classes/EnvisionPortal/CacheableFieldInterface.md) | |
-| [`DataMapperInterface`](./classes/EnvisionPortal/DataMapperInterface.md) | |
+| [`CacheableFieldInterface`](./classes/EnvisionPortal/CacheableFieldInterface.md) | Interface for cacheable fields, allowing fetching and storing data.|
+| [`DataMapperInterface`](./classes/EnvisionPortal/DataMapperInterface.md) | Defines a set of methods for interacting with a database.  It<br />provides a common interface for accessing and manipulating data<br />in a database-agnostic manner.|
 | [`EntityInterface`](./classes/EnvisionPortal/EntityInterface.md) | |
-| [`FieldInterface`](./classes/EnvisionPortal/FieldInterface.md) | |
-| [`ModuleInterface`](./classes/EnvisionPortal/ModuleInterface.md) | |
+| [`FieldInterface`](./classes/EnvisionPortal/FieldInterface.md) | Interface for representing a field in a form.|
+| [`ModuleInterface`](./classes/EnvisionPortal/ModuleInterface.md) | Interface for defining modules in Envision Portal.|
 | [`PageModeInterface`](./classes/EnvisionPortal/PageModeInterface.md) | |
 | [`SharedMemberDataInterface`](./classes/EnvisionPortal/SharedMemberDataInterface.md) | |
-| [`UpdateFieldInterface`](./classes/EnvisionPortal/UpdateFieldInterface.md) | |
+| [`UpdateFieldInterface`](./classes/EnvisionPortal/UpdateFieldInterface.md) | Interface for fields that need to transform data before saving.es/MIT|
 
 
 
@@ -129,4 +129,4 @@ This is an automatically generated documentation for **Envision Portal documenta
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

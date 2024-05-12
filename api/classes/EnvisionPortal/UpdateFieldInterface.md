@@ -1,6 +1,8 @@
+***
+
 # UpdateFieldInterface
 
-
+Interface for fields that need to transform data before saving.es/MIT
 
 
 
@@ -13,10 +15,10 @@
 
 ### beforeSave
 
-Transform data right before it is saved.
+Transform data before it is saved.
 
 ```php
-public beforeSave( $val): string
+public beforeSave(string|null $val): string
 ```
 
 
@@ -30,12 +32,12 @@ public beforeSave( $val): string
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$val` | **** | ?string Value from POST. |
+| `$val` | **string&#124;null** | The value from POST. |
 
 
 **Return Value:**
 
-Value to save to the database.
+The value to save to the database.
 
 
 
@@ -48,7 +50,7 @@ Value to save to the database.
 
 ### __construct
 
-
+FieldInterface constructor.
 
 ```php
 public __construct(array $field, string $value, string $type): mixed
@@ -65,9 +67,9 @@ public __construct(array $field, string $value, string $type): mixed
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$field` | **array** |  |
-| `$value` | **string** |  |
-| `$type` | **string** |  |
+| `$field` | **array** | An array representing the field properties. |
+| `$value` | **string** | The current value of the field. |
+| `$type` | **string** | The type of the field. |
 
 
 
@@ -77,7 +79,7 @@ public __construct(array $field, string $value, string $type): mixed
 
 ### __toString
 
-Output the HTML control for this field.
+Convert the field to its HTML representation.
 
 ```php
 public __toString(): string
@@ -91,6 +93,10 @@ public __toString(): string
 
 
 
+**Return Value:**
+
+The HTML representation of the field.
+
 
 
 
@@ -98,4 +104,4 @@ public __toString(): string
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

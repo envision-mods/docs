@@ -1,8 +1,11 @@
+***
+
 # DatabaseHelper
 
+Provides a set of utility methods for working with the database.
 
-
-
+These methods can be used to simplify common database operations, such as
+fetching data, inserting new rows, updating existing rows, and deleting rows.
 
 * Full name: `\EnvisionPortal\DatabaseHelper`
 
@@ -226,4 +229,4 @@ public static increment(string $table_name, string $increment_col, string $where
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

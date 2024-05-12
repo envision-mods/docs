@@ -35,7 +35,7 @@ private $fields
 
 ### __invoke
 
-
+Invoke the module with an array of fields.
 
 ```php
 public __invoke(array $fields): mixed
@@ -52,7 +52,7 @@ public __invoke(array $fields): mixed
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$fields` | **array** |  |
+| `$fields` | **array** | An array of fields to process. |
 
 
 
@@ -62,10 +62,10 @@ public __invoke(array $fields): mixed
 
 ### __toString
 
-
+Convert the module to its HTML representation.
 
 ```php
-public __toString(): mixed
+public __toString(): string
 ```
 
 
@@ -76,6 +76,10 @@ public __toString(): mixed
 
 
 
+**Return Value:**
+
+The HTML representation of the module.
+
 
 
 
@@ -83,7 +87,7 @@ public __toString(): mixed
 
 ### getDefaultProperties
 
-
+Get the default properties of the module.
 
 ```php
 public getDefaultProperties(): array
@@ -97,6 +101,10 @@ public getDefaultProperties(): array
 
 
 
+**Return Value:**
+
+The default properties of the module.
+
 
 
 
@@ -108,10 +116,10 @@ public getDefaultProperties(): array
 
 ### error
 
-
+Generates an error message.
 
 ```php
-public error(mixed $type = &#039;error&#039;, mixed $error_type = &#039;general&#039;, mixed $log_error = false): string
+public error(string $type = &#039;error&#039;, string $error_type = &#039;general&#039;, bool $log_error = false): string
 ```
 
 
@@ -125,10 +133,14 @@ public error(mixed $type = &#039;error&#039;, mixed $error_type = &#039;general&
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$type` | **mixed** |  |
-| `$error_type` | **mixed** |  |
-| `$log_error` | **mixed** |  |
+| `$type` | **string** | The type of error message. |
+| `$error_type` | **string** | The type of error. |
+| `$log_error` | **bool** | Whether to log the error. |
 
+
+**Return Value:**
+
+The error message.
 
 
 
@@ -137,7 +149,7 @@ public error(mixed $type = &#039;error&#039;, mixed $error_type = &#039;general&
 
 ### captureOutput
 
-
+Captures the output of a callback function.
 
 ```php
 private captureOutput(callable $callback, mixed $args): string
@@ -154,9 +166,13 @@ private captureOutput(callable $callback, mixed $args): string
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$callback` | **callable** |  |
-| `$args` | **mixed** |  |
+| `$callback` | **callable** | The callback function to execute. |
+| `$args` | **mixed** | Optional arguments to pass to the callback. |
 
+
+**Return Value:**
+
+The captured output.
 
 
 
@@ -165,4 +181,4 @@ private captureOutput(callable $callback, mixed $args): string
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

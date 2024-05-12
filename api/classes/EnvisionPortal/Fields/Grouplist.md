@@ -109,14 +109,14 @@ public __construct(array $field, string $key, string $type): mixed
 
 ### fetchData
 
-Fetch data from the database to "cache", or store in memory.  This is
-useful when multiple fields of the same type are loaded and a static
-(unchanging) query is used to fetch data.
+Fetch data from the database to "cache", or store in memory.
 
 ```php
 public fetchData(): array
 ```
 
+This is useful when multiple fields of the same type are loaded
+and a static (unchanging) query is used to fetch data.
 
 
 
@@ -124,6 +124,9 @@ public fetchData(): array
 
 
 
+**Return Value:**
+
+The fetched data.
 
 
 
@@ -132,7 +135,7 @@ public fetchData(): array
 
 ### setData
 
-Grab shared data from another field of the same type.
+Store shared data from another field of the same type.
 
 ```php
 public setData(array $data): void
@@ -159,7 +162,7 @@ public setData(array $data): void
 
 ### beforeSave
 
-Transform data right before it is saved.
+Transform data before it is saved.
 
 ```php
 public beforeSave(mixed $val): string
@@ -176,12 +179,12 @@ public beforeSave(mixed $val): string
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$val` | **mixed** | ?string Value from POST. |
+| `$val` | **mixed** | The value from POST. |
 
 
 **Return Value:**
 
-Value to save to the database.
+The value to save to the database.
 
 
 
@@ -211,4 +214,4 @@ public __toString(): string
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

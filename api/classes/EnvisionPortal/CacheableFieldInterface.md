@@ -1,6 +1,8 @@
+***
+
 # CacheableFieldInterface
 
-
+Interface for cacheable fields, allowing fetching and storing data.
 
 
 
@@ -13,14 +15,14 @@
 
 ### fetchData
 
-Fetch data from the database to "cache", or store in memory.  This is
-useful when multiple fields of the same type are loaded and a static
-(unchanging) query is used to fetch data.
+Fetch data from the database to "cache", or store in memory.
 
 ```php
 public fetchData(): array
 ```
 
+This is useful when multiple fields of the same type are loaded
+and a static (unchanging) query is used to fetch data.
 
 
 
@@ -28,6 +30,9 @@ public fetchData(): array
 
 
 
+**Return Value:**
+
+The fetched data.
 
 
 
@@ -36,7 +41,7 @@ public fetchData(): array
 
 ### setData
 
-Grab shared data from another field of the same type.
+Store shared data from another field of the same type.
 
 ```php
 public setData(array $data): void
@@ -67,7 +72,7 @@ public setData(array $data): void
 
 ### __construct
 
-
+FieldInterface constructor.
 
 ```php
 public __construct(array $field, string $value, string $type): mixed
@@ -84,9 +89,9 @@ public __construct(array $field, string $value, string $type): mixed
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$field` | **array** |  |
-| `$value` | **string** |  |
-| `$type` | **string** |  |
+| `$field` | **array** | An array representing the field properties. |
+| `$value` | **string** | The current value of the field. |
+| `$type` | **string** | The type of the field. |
 
 
 
@@ -96,7 +101,7 @@ public __construct(array $field, string $value, string $type): mixed
 
 ### __toString
 
-Output the HTML control for this field.
+Convert the field to its HTML representation.
 
 ```php
 public __toString(): string
@@ -110,6 +115,10 @@ public __toString(): string
 
 
 
+**Return Value:**
+
+The HTML representation of the field.
+
 
 
 
@@ -117,4 +126,4 @@ public __toString(): string
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

@@ -1,6 +1,8 @@
+***
+
 # Util
 
-
+Utility class providing various helper functions.
 
 
 
@@ -14,7 +16,7 @@
 
 ### decamelize
 
-
+Convert a camelCase string to snake_case.
 
 ```php
 public static decamelize(string $string): string
@@ -31,8 +33,12 @@ public static decamelize(string $string): string
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$string` | **string** |  |
+| `$string` | **string** | The input string in camelCase format. |
 
+
+**Return Value:**
+
+The converted string in snake_case format.
 
 
 
@@ -41,7 +47,7 @@ public static decamelize(string $string): string
 
 ### camelize
 
-
+Convert a snake_case string to camelCase.
 
 ```php
 public static camelize(string $string): string
@@ -58,8 +64,12 @@ public static camelize(string $string): string
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$string` | **string** |  |
+| `$string` | **string** | The input string in snake_case format. |
 
+
+**Return Value:**
+
+The converted string in camelCase format.
 
 
 
@@ -68,7 +78,7 @@ public static camelize(string $string): string
 
 ### find_integrated_classes
 
-
+Find classes implementing a specified interface.
 
 ```php
 public static find_integrated_classes(string $interface): \Generator
@@ -85,8 +95,12 @@ public static find_integrated_classes(string $interface): \Generator
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$interface` | **string** |  |
+| `$interface` | **string** | The fully qualified interface name. |
 
+
+**Return Value:**
+
+A generator yielding the found class names.
 
 
 
@@ -95,14 +109,19 @@ public static find_integrated_classes(string $interface): \Generator
 
 ### map
 
-Similar to array_map, but maps key-value pairs (tuples).
+Apply a callback to each element of the iterable.
 
 ```php
-public static map(callable $callback, iterable $iterator): \EnvisionPortal\Generator
+public static map(callable $callback, iterable $iterator): \Generator
 ```
+
+Similar to array_map, but maps key-value pairs (tuples).
 
 Applies the callback to the elements of the given iterable.
 Original values (and keys) are lost during transformation!
+
+The callback must return a list (array) with two elements; the
+first one becomes the key and the second one becomes the value.
 
 * This method is **static**.
 
@@ -113,9 +132,13 @@ Original values (and keys) are lost during transformation!
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$callback` | **callable** | This must return a list with two<br />elements; the first one becomes the key<br />and the second one becomes the value. |
-| `$iterator` | **iterable** | An iterable to run through $callback. |
+| `$callback` | **callable** | The callback function to apply. |
+| `$iterator` | **iterable** | The iterable to apply the callback to. |
 
+
+**Return Value:**
+
+A generator yielding the results of applying the callback.
 
 
 
@@ -124,7 +147,7 @@ Original values (and keys) are lost during transformation!
 
 ### find_classes
 
-
+Find classes in a specified namespace implementing a specified interface.
 
 ```php
 public static find_classes(\FilesystemIterator $iterator, string $ns, string $interface): \Generator
@@ -141,10 +164,14 @@ public static find_classes(\FilesystemIterator $iterator, string $ns, string $in
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$iterator` | **\FilesystemIterator** |  |
-| `$ns` | **string** |  |
-| `$interface` | **string** |  |
+| `$iterator` | **\FilesystemIterator** | The iterator for the namespace. |
+| `$ns` | **string** | The namespace of the classes to search. |
+| `$interface` | **string** | The fully qualified interface name. |
 
+
+**Return Value:**
+
+A generator yielding the found class names.
 
 
 
@@ -153,14 +180,15 @@ public static find_classes(\FilesystemIterator $iterator, string $ns, string $in
 
 ### replaceVars
 
-Replaces placeholders from a string with the provided variables.
+Replace placeholders in a string with provided variables.
 
 ```php
-public static replaceVars(string $template, array $array): string
+public static replaceVars(string $template, array $variables): string
 ```
 
 Example:
-"The book {title} was written by {author_name}" becomes "The book Harry Potter was written by J.K. Rowling"
+"The book {title} was written by {author_name}" becomes
+"The book Harry Potter was written by J.K. Rowling"
 
 * This method is **static**.
 
@@ -171,9 +199,13 @@ Example:
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$template` | **string** | A template with variables placeholders {$variable}. |
-| `$array` | **array** |  |
+| `$template` | **string** | The template string with placeholders. |
+| `$variables` | **array** | The key-value store of variables and values. |
 
+
+**Return Value:**
+
+The processed template string.
 
 
 
@@ -182,7 +214,7 @@ Example:
 
 ### listGroups
 
-Gets all membergroups and filters them according to the parameters.
+Get a list of membergroups based on specified criteria.
 
 ```php
 public listGroups(int[] $checked = [], bool $inherited = false): array
@@ -199,13 +231,13 @@ public listGroups(int[] $checked = [], bool $inherited = false): array
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$checked` | **int[]** | list of all id_groups to be checked (have a mark in the checkbox).<br />Default is an empty array. |
-| `$inherited` | **bool** | Whether to filter out the inherited groups. Default is false. |
+| `$checked` | **int[]** | List of group IDs to be marked. |
+| `$inherited` | **bool** | Whether to filter out inherited groups. |
 
 
 **Return Value:**
 
-All the membergroups filtered according to the parameters; empty array if something went wrong.
+The list of membergroups filtered according to the criteria.
 
 
 
@@ -214,7 +246,7 @@ All the membergroups filtered according to the parameters; empty array if someth
 
 ### process
 
-
+Process a list of items, sorting and slicing as needed.
 
 ```php
 public static process(int $start, int $items_per_page, string $sort, array $list): array
@@ -231,15 +263,15 @@ public static process(int $start, int $items_per_page, string $sort, array $list
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$start` | **int** | The item to start with. |
-| `$items_per_page` | **int** | How many items to show per page. |
-| `$sort` | **string** | A string indicating how to sort results. |
-| `$list` | **array** | Array of arrays or objects implementing<br />ArrayAccess to sort and slice. |
+| `$start` | **int** | The index to start slicing from. |
+| `$items_per_page` | **int** | The number of items per page. |
+| `$sort` | **string** | The sorting criteria. |
+| `$list` | **array** | The list of items to process. |
 
 
 **Return Value:**
 
-An array of info.
+The processed list of items.
 
 
 
@@ -248,4 +280,4 @@ An array of info.
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

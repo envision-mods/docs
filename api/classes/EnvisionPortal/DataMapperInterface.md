@@ -1,8 +1,20 @@
+***
+
 # DataMapperInterface
 
+Defines a set of methods for interacting with a database.  It
+provides a common interface for accessing and manipulating data
+in a database-agnostic manner.
 
+A DataMapper class is responsible for managing the interaction between
+the PHP application and the database.  It provides a set of methods for
+fetching, inserting, updating, and deleting entities from the database.
 
+The purpose of a DataMapper class is to:
 
+- Provide a consistent and efficient way to access the database;
+- Reduce the amount of boilerplate code required to perform database operations;
+- Make it easier to maintain the application's database schema.
 
 * Full name: `\EnvisionPortal\DataMapperInterface`
 
@@ -13,7 +25,7 @@
 
 ### fetchBy
 
-Fetches data from the database based on specified criteria.
+Fetches entities from the database based on specified criteria.
 
 ```php
 public fetchBy(array $selects, array $params = [], array $joins = [], array $where = [], array $order = [], array $group = [], int $limit = null, int $offset = null): array
@@ -51,7 +63,7 @@ The result as associative array of database rows.
 
 ### insert
 
-Inserts a new record into the database.
+Inserts a new entity into the database.
 
 ```php
 public insert(\EnvisionPortal\EntityInterface $entity): void
@@ -78,7 +90,7 @@ public insert(\EnvisionPortal\EntityInterface $entity): void
 
 ### update
 
-Updates an existing record in the database.
+Updates an existing entity in the database.
 
 ```php
 public update(\EnvisionPortal\EntityInterface $entity): void
@@ -105,7 +117,7 @@ public update(\EnvisionPortal\EntityInterface $entity): void
 
 ### delete
 
-Deletes a record from the database.
+Deletes a entity from the database.
 
 ```php
 public delete(\EnvisionPortal\EntityInterface $entity): void
@@ -132,7 +144,7 @@ public delete(\EnvisionPortal\EntityInterface $entity): void
 
 ### deleteMany
 
-Deletes multiple records from the database.
+Deletes multiple entities from the database.
 
 ```php
 public deleteMany(array $ids): void
@@ -149,7 +161,7 @@ public deleteMany(array $ids): void
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$ids` | **array** | Array of IDs of the records to delete. |
+| `$ids` | **array** | Array of IDs of the entities to delete. |
 
 
 
@@ -159,7 +171,7 @@ public deleteMany(array $ids): void
 
 ### deleteAll
 
-Deletes all records from the database.
+Deletes all entities from the database.
 
 ```php
 public deleteAll(): void
@@ -207,4 +219,4 @@ public incrementViews(\EnvisionPortal\EntityInterface $entity): void
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

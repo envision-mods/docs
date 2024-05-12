@@ -65,7 +65,7 @@ private bool $can_post
 
 ### __invoke
 
-
+Invoke the module with an array of fields.
 
 ```php
 public __invoke(array $fields): mixed
@@ -82,7 +82,7 @@ public __invoke(array $fields): mixed
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$fields` | **array** |  |
+| `$fields` | **array** | An array of fields to process. |
 
 
 
@@ -92,10 +92,10 @@ public __invoke(array $fields): mixed
 
 ### __toString
 
-
+Convert the module to its HTML representation.
 
 ```php
-public __toString(): mixed
+public __toString(): string
 ```
 
 
@@ -106,6 +106,10 @@ public __toString(): mixed
 
 
 
+**Return Value:**
+
+The HTML representation of the module.
+
 
 
 
@@ -113,7 +117,7 @@ public __toString(): mixed
 
 ### getDefaultProperties
 
-
+Get the default properties of the module.
 
 ```php
 public getDefaultProperties(): array
@@ -127,6 +131,10 @@ public getDefaultProperties(): array
 
 
 
+**Return Value:**
+
+The default properties of the module.
+
 
 
 
@@ -134,4 +142,4 @@ public getDefaultProperties(): array
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

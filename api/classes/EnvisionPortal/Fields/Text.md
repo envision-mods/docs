@@ -65,7 +65,7 @@ private string $type
 
 ### __construct
 
-
+FieldInterface constructor.
 
 ```php
 public __construct(array $field, string $key, string $type): mixed
@@ -82,9 +82,9 @@ public __construct(array $field, string $key, string $type): mixed
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$field` | **array** |  |
+| `$field` | **array** | An array representing the field properties. |
 | `$key` | **string** |  |
-| `$type` | **string** |  |
+| `$type` | **string** | The type of the field. |
 
 
 
@@ -94,7 +94,7 @@ public __construct(array $field, string $key, string $type): mixed
 
 ### __toString
 
-Output the HTML control for this field.
+Convert the field to its HTML representation.
 
 ```php
 public __toString(): string
@@ -108,6 +108,10 @@ public __toString(): string
 
 
 
+**Return Value:**
+
+The HTML representation of the field.
+
 
 
 
@@ -115,4 +119,4 @@ public __toString(): string
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12

@@ -1,3 +1,5 @@
+***
+
 # DataMapper
 
 
@@ -16,7 +18,7 @@
 
 ### fetchBy
 
-Fetches data from the database based on specified criteria.
+Fetches entities from the database based on specified criteria.
 
 ```php
 public fetchBy(array $selects, array $params = [], array $joins = [], array $where = [], array $order = [], array $group = [], int $limit = null, int $offset = null): array
@@ -54,7 +56,7 @@ The result as associative array of database rows.
 
 ### insert
 
-Inserts a new record into the database.
+Inserts a new entity into the database.
 
 ```php
 public insert(\EnvisionPortal\EntityInterface $entity): void
@@ -81,7 +83,7 @@ public insert(\EnvisionPortal\EntityInterface $entity): void
 
 ### update
 
-Updates an existing record in the database.
+Updates an existing entity in the database.
 
 ```php
 public update(\EnvisionPortal\EntityInterface $entity): void
@@ -108,7 +110,7 @@ public update(\EnvisionPortal\EntityInterface $entity): void
 
 ### delete
 
-Deletes a record from the database.
+Deletes a entity from the database.
 
 ```php
 public delete(\EnvisionPortal\EntityInterface $entity): void
@@ -135,7 +137,7 @@ public delete(\EnvisionPortal\EntityInterface $entity): void
 
 ### deleteMany
 
-Deletes multiple records from the database.
+Deletes multiple entities from the database.
 
 ```php
 public deleteMany(array $ids): void
@@ -152,7 +154,7 @@ public deleteMany(array $ids): void
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$ids` | **array** | Array of IDs of the records to delete. |
+| `$ids` | **array** | Array of IDs of the entities to delete. |
 
 
 
@@ -162,7 +164,7 @@ public deleteMany(array $ids): void
 
 ### deleteAll
 
-Deletes all records from the database.
+Deletes all entities from the database.
 
 ```php
 public deleteAll(\EnvisionPortal\EntityInterface $entity): void
@@ -189,7 +191,7 @@ public deleteAll(\EnvisionPortal\EntityInterface $entity): void
 
 ### incrementViews
 
-Increments the views counter for a specific entity in the database.
+Increment the view count for a page if not already viewed in the current session.
 
 ```php
 public incrementViews(\EnvisionPortal\EntityInterface $entity): void
@@ -206,7 +208,7 @@ public incrementViews(\EnvisionPortal\EntityInterface $entity): void
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$entity` | **\EnvisionPortal\EntityInterface** | The entity for which to increment the views counter. |
+| `$entity` | **\EnvisionPortal\EntityInterface** |  |
 
 
 
@@ -216,4 +218,4 @@ public incrementViews(\EnvisionPortal\EntityInterface $entity): void
 
 
 ***
-> Automatically generated on 2024-05-11
+> Automatically generated on 2024-05-12
