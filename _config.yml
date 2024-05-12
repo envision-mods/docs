@@ -21,7 +21,7 @@ defaults:
       layout: default
   -
     scope:
-      path: "api/classes"
+      path: "api/classes/EnvisionPortal"
       type: "pages" # previously `page` in Jekyll 2.2.
     values:
       parent: API
