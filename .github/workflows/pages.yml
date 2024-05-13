@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - run: find api/classes -type f -exec sed -i 's/^+++//g' {} +
+      - run: find api/classes -type f -exec sed -i '/^\*\*\*$/d' {} +
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
