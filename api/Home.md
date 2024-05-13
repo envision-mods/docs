@@ -1,5 +1,5 @@
 ---
-title: API
+title: Technical Reference
 nav_order: 9
 has_children: true
 ---
