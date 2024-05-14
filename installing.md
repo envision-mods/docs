@@ -1,3 +1,8 @@
+---
+title: Installing
+nav_order: 2
+---
+
 # Installing Envision Portal
 
 Here's a step-by-step guide to help you through installing Envision Portal onto your forum:
@@ -11,6 +16,7 @@ Here's a step-by-step guide to help you through installing Envision Portal onto 
 1. Connect to your web server using an FTP client or a file manager provided by your web hosting control panel.
 2. Navigate to the directory where your SMF forum is installed (usually public_html or www).
 3. Upload the modification files to the appropriate directories according to the instructions provided by the modification developer.
+
 ### Manually via the Package Manager
 1. Navigate to the "Admin" section and select "Package Manager" from the menu.
 2. Click on the "Browse" button and locate the modification package file (.zip or .tar.gz) that you downloaded earlier.

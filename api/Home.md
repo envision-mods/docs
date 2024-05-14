@@ -1,10 +1,17 @@
 ---
 title: Technical Reference
-nav_order: 9
+nav_order: 99
 has_children: true
+has_toc: false
 ---
-
 # Envision Portal documentation
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 
 
