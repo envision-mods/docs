@@ -14,25 +14,10 @@ Take a look at the list of available modules located on the right-hand panel. Fr
 
 **Customize Module Settings**: Access the settings page for each module to tailor its behavior and appearance according to your preferences. Experiment with different configurations to create a personalized experience for your forum users.
 
-**Flexibility with Module Templates**: Dream Portal introduces the concept of Module Templates, which offer different container designs for modules. Unlike other portals with predefined container styles, Dream Portal allows third-party developers to create Module Template Packages that can be installed, uninstalled, or deleted.
+**Flexibility with Module Templates**: Envision Portal introduces the concept of Module Templates, which offer different container designs for modules. Unlike other portals with predefined container styles, Dream Portal allows third-party developers to create Module Template Packages that can be installed, uninstalled, or deleted.
 
 {: .highlight }
 Module templates are not implmented yet. See [issue #7](Phttps://github.com/envision-mods/portal/issues/7) for progress on its implmentation.
-
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
-
-> [!TIP]
-> Helpful advice for doing things better or more easily.
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
 
 ## Customize Module Settings
 

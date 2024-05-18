@@ -1,35 +1,44 @@
 ---
-title: Home
-layout: home
+nav_order: 1
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+## Envision Portal
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+Envision Portal is a modification (mod) designed specifically for Simple Machines Forum (SMF), providing enhanced functionality akin to popular portal mods like Simple Portal or Tiny Portal. With Envision Portal, administrators can elevate their SMF forums by incorporating dynamic portal features, fostering community engagement, and streamlining navigation for users.
 
-More specifically, the created site:
+- **Current Version:** 1.0
+- **Compatibility:** SMF 2.0.x, SMF 2.1.x
+- **Official Site:** [Envision Portal](https://portal.live627.com)
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+### General overview of features
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+#### Homepage
+- Standard Homepage that can be managed with the layout manager.
+- This customizable page serves as the central hub/landing page for your community.
+- Add modules to this layout to display essential information, such as recent posts, announcements, and other relevant content to welcome and engage users.
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+#### Envision Layouts
+- Layouts are not limited to specific presets; add as many sections as desired.
+  - Layouts must have at least two sections: one must be specified as SMF column!
+- Ability to specify where layouts are shown, including areas added by other SMF mods.
 
-To get started with creating a site, simply:
+#### Modules
+- Populate layouts with modules (blocks or widgets in other systems) such as recent topics, user statistics, polls, and more.
+  - [See a list of all included moddules here](https://envision-mods.github.io/docs/module-list.html)
+- Drag & drop modules within sections of a layout to organize them and change their order.
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+#### Envision Menu
+- Includes its own Menu Manager for adding menu items to the SMF menu.
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+#### Envision Pages
+- Built-in page manager that handles BBC, HTML, Liquid, Markdown, and PHP output.
+- Features a full permission set for viewing pages and a status for activation/deactivation without page removal.
 
-----
+### Support and Documentation
+Seek support from the Envision Portal community forums for assistance with installation, configuration, or troubleshooting.
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+### Credits
+Envision Portal is developed and maintained by the Envision Mods team, with contributions from the SMF community. Special thanks to the creators of Simple Machines Forum for providing a robust platform for forum administrators and users alike.
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+### Feedback
+Questions, comments, or feature requests regarding Envision Portal should be made on the official site. Your input helps us improve and evolve the modification to better serve the SMF community.
